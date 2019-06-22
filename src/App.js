@@ -11,6 +11,22 @@ function One(){
   );
 }
 
+var Two=function(){
+  return (
+    <div>
+      <h1>Cach so 2</h1>
+      <h3>Kieu ham anonymous</h3>
+    </div>
+  );
+}
+
+var Three = () => (
+                    <div>
+                        <h1>Cach so 3</h1>
+                        <h3>Kieu ham arrow</h3>
+                      </div>
+                  );
+
 function App() {
   return (
     <div className="App">
@@ -27,6 +43,11 @@ function App() {
         </a> */}
       </header>
       <One></One>
+      <hr></hr>
+      <Two></Two>
+      <hr></hr>
+      <Three></Three>
+      <hr></hr>
     </div>
   );
 }
