@@ -18,12 +18,31 @@ class App1 extends Component {
   }
 }
 
+// vi du ve ham map
+const so = [1,2,3,4,5];
+const so2 = so.map((x) => x*2 + ",");
+const so3 = so.map((x) => (
+  <li>Number: {x}</li>
+));
+class App2 extends Component {
+  render() {
+    return (
+      <div>
+        {so2}
+        {so3}
+      </div>
+    );
+  }
+}
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <App1></App1>
+        <App2></App2>
         <a
           className="App-link"
           href="https://reactjs.org"
