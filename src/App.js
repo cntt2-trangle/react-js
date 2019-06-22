@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,6 +27,17 @@ var Three = () => (
                       </div>
                   );
 
+class Four extends Component {
+  render() {
+  return (
+          <div>
+            <h1>Cach so 4</h1>
+            <h3>Kieu class</h3>
+          </div>
+          );
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -48,6 +59,7 @@ function App() {
       <hr></hr>
       <Three></Three>
       <hr></hr>
+      <Four></Four>
     </div>
   );
 }
