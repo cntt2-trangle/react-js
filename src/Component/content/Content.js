@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 class Content extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            trangThai:0 
+        }
     }
 
     thongbao = () => {
@@ -35,8 +38,16 @@ class Content extends Component {
                             <div className="btn btn-group">
                                 <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
                                 <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                                <div className="btn btn-info" onClick={() => this.thongbao3("Say hi")}>Ahihi</div>
-                                <div className="btn btn-warning" onClick={this.thongbao3.bind(this,"Say helllo")}>Ahoho</div>
+                                {/* <div className="btn btn-info" onClick={() => this.thongbao3("Say hi")}>Ahihi</div>
+                                <div className="btn btn-warning" onClick={this.thongbao3.bind(this,"Say helllo")}>Ahoho</div> */}
+                            </div>
+                        </div>
+                        <hr />
+
+                        <div className="row">
+                            <div className="form-group">
+                            <input type="text" name="ten" className="form-control" />
+                            <div className="btn btn-success">Save</div>
                             </div>
                         </div>
                         <hr />
