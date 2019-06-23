@@ -18,11 +18,31 @@ class App extends Component {
     console.log('componentDidMount da chay')
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate chay roi')
+    return true;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log('componentWillUpdate da chay')
+  }
+  
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate da chay')
+  }
+  
+  capNhatState = () => {
+    this.setState({
+      trangthai:"trang thai duoc update"
+    });
+  }
+
   render() {
     console.log('Day la ham render da chay');
+    console.log(this.state.trangthai);
     return (
-      <div>
-        
+      <div className="App">
+          <button onClick={() => this.capNhatState()}>Click de update state</button>
       </div>
     );
   }
