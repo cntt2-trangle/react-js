@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import './App.css';
+import NoiDung from './noiDung';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      trangthai:"khoitao"
+      trangthai:"khoitao",
+      trangthai2:"khoitao2",
     }
   }
   
@@ -33,16 +35,17 @@ class App extends Component {
   
   capNhatState = () => {
     this.setState({
-      trangthai:"trang thai duoc update"
+      trangthai:"CapNhat1",
+      trangthai2:"CapNhat2"
     });
   }
 
   render() {
-    console.log('Day la ham render da chay');
     console.log(this.state.trangthai);
     return (
       <div className="App">
-          <button onClick={() => this.capNhatState()}>Click de update state</button>
+        <NoiDung ten={this.state.trangthai}></NoiDung>
+        <button onClick={() => this.capNhatState()}>Click to update state</button>
       </div>
     );
   }
