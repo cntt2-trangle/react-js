@@ -32,7 +32,7 @@ class Content extends Component {
     renderForm = () => (
         <div className="row">
             <div className="form-group">
-                <input defaultValue={this.props.tieude} type="text" name="ten" className="form-control" />
+                <input ref= {(dulieunhap) => {this.trunggian = dulieunhap}} defaultValue={this.props.tieude} type="text" name="ten" className="form-control" />
             </div>
             <div className="form-group">
                 <div className="btn btn-success" onClick={() => this.saveClick()}>Save</div>
@@ -55,6 +55,7 @@ class Content extends Component {
 
     saveClick = () => {
         this.setState({trangThai:0});
+        console.log(this.trunggian.value);
     }
 
     render() {
