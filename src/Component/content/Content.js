@@ -20,6 +20,32 @@ class Content extends Component {
         alert(x);
     }
 
+    renderButton = () => (
+        <div className="row">
+            <div className="btn btn-group">
+                <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
+                <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
+            </div>
+        </div>
+    )
+
+    renderForm = () => (
+        <div className="row">
+            <div className="form-group">
+            <input type="text" name="ten" className="form-control" />
+            <div className="btn btn-success">Save</div>
+            </div>
+        </div>
+    )
+        
+    displayCheck = () => {
+        if(this.state.trangThai === 0) {
+            return this.renderButton();
+        } else {
+            return this.renderForm();
+        }
+    }
+
     render() {
         return (
             <section>
@@ -34,23 +60,8 @@ class Content extends Component {
                     <div className="p-1">
                         <h2 className="display-4">{this.props.tieude}</h2>
                         <p>{this.props.text}</p>
-                        <div className="row">
-                            <div className="btn btn-group">
-                                <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
-                                <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                                {/* <div className="btn btn-info" onClick={() => this.thongbao3("Say hi")}>Ahihi</div>
-                                <div className="btn btn-warning" onClick={this.thongbao3.bind(this,"Say helllo")}>Ahoho</div> */}
-                            </div>
-                        </div>
-                        <hr />
-
-                        <div className="row">
-                            <div className="form-group">
-                            <input type="text" name="ten" className="form-control" />
-                            <div className="btn btn-success">Save</div>
-                            </div>
-                        </div>
-                        <hr />
+                    {this.displayCheck()}
+                    <hr></hr>
                     </div>
                     </div>
                 </div>
