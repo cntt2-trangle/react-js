@@ -11,9 +11,15 @@ class App extends Component {
       <div>
         <TopMenu></TopMenu>
         <Header></Header>
-        <Content tieude="Cach su dung props bang class" vitri1="order-lg-2" image ="img/01.jpg"></Content>
-        <Content tieude="Tin so 2" image ="img/02.jpg"></Content>
-        <Content tieude="Tin so 3" image ="img/03.jpg"></Content>
+        <Content tieude="A" vitri1="order-lg-2" image ="img/01.jpg" text="Title 1"></Content>
+        <Content tieude="B" image ="img/02.jpg" text="Title 2"></Content>
+        <Content tieude="C" image ="img/03.jpg" text="Title 3"></Content>
+        <Content tieude="A" vitri1="order-lg-2" image ="img/01.jpg" text="Title 1"></Content>
+        <Content tieude="B" image ="img/02.jpg" text="Title 2"></Content>
+        <Content tieude="C" image ="img/03.jpg" text="Title 3"></Content>
+        <Content tieude="A" vitri1="order-lg-2" image ="img/01.jpg" text="Title 1"></Content>
+        <Content tieude="B" image ="img/02.jpg" text="Title 2"></Content>
+        <Content tieude="C" image ="img/03.jpg" text="Title 3"></Content>
         <Footer></Footer>
       </div>
     );
