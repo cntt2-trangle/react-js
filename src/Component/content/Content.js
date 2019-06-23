@@ -13,6 +13,10 @@ class Content extends Component {
         alert('Thong bao so 2');
     }
 
+    thongbao3 = (x) => {
+        alert(x);
+    }
+
     render() {
         return (
             <section>
@@ -31,6 +35,8 @@ class Content extends Component {
                             <div className="btn btn-group">
                                 <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
                                 <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
+                                <div className="btn btn-info" onClick={() => this.thongbao3("Say hi")}>Ahihi</div>
+                                <div className="btn btn-warning" onClick={this.thongbao3.bind(this,"Say helllo")}>Ahoho</div>
                             </div>
                         </div>
                         <hr />
