@@ -66,6 +66,7 @@ class News extends Component {
                             dl.map((value,key) => {
                                 return (
                                     <NewsItem key={key}
+                                    tinId={value.id}
                                     anh={value.anh}
                                     tieuDe={value.tieuDe}
                                     trichDan={value.trichDan}></NewsItem>
