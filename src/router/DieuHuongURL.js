@@ -9,7 +9,7 @@ class DieuHuongURL extends Component {
     render() {
         return (
             <div>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/home" component={Home} />
                 <Route path="/tin" component={News} />
                 <Route path="/tin-chi-tiet" component={NewDetail} />
                 <Route path="/lien-he" component={Contact} />
