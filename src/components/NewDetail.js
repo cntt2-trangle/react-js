@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class NewDetail extends Component {
     render() {
+        console.log(this.props);
         return (
             <div>
                 {/* begin menu */}
