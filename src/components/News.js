@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-
+import NewsItem from './NewsItem';
+import dl from './dulieu.json';
 class News extends Component {
     render() {
+        console.log(dl);
         return (
             <div>
                 {/* begin menu */}
@@ -58,50 +60,12 @@ class News extends Component {
                 {/* begin tin tuc */}
                 <div className="container">
                     <div className="row mt-3">
-                    <div className="col-4">
-                        <div className="card">
-                        <a href="chitiet.html"><img src="https://kenh14cdn.com/2019/6/25/screen-shot-2019-06-25-at-101726-am-15614332031522123972695.png" alt="" className="img-fluid" /></a>
-                        <div className="card-body">
-                            <blockquote className="blockquote">
-                            <p>Loạt cơm hộp đẹp mắt, đầy đủ màu sắc và dinh dưỡng mà chị vợ trẻ chia sẻ khiến người người nhà nhà phải ngưỡng mộ.</p>
-                            <footer className="card-blockquote"><cite title="Source title">Cơm trưa "vợ nhà người ta" làm đầy ắp tình yêu khiến cư dân mạng trầm trồ vì độ đảm đang</cite></footer>
-                            </blockquote>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="card">
-                        <a href="chitiet.html"><img src="https://kenh14cdn.com/2019/6/25/screen-shot-2019-06-25-at-101726-am-15614332031522123972695.png" alt="" className="img-fluid" /></a>
-                        <div className="card-body">
-                            <blockquote className="blockquote">
-                            <p>Loạt cơm hộp đẹp mắt, đầy đủ màu sắc và dinh dưỡng mà chị vợ trẻ chia sẻ khiến người người nhà nhà phải ngưỡng mộ.</p>
-                            <footer className="card-blockquote"><cite title="Source title">Cơm trưa "vợ nhà người ta" làm đầy ắp tình yêu khiến cư dân mạng trầm trồ vì độ đảm đang</cite></footer>
-                            </blockquote>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="card">
-                        <a href="chitiet.html"><img src="https://kenh14cdn.com/2019/6/25/screen-shot-2019-06-25-at-101726-am-15614332031522123972695.png" alt="" className="img-fluid" /></a>
-                        <div className="card-body">
-                            <blockquote className="blockquote">
-                            <p>Loạt cơm hộp đẹp mắt, đầy đủ màu sắc và dinh dưỡng mà chị vợ trẻ chia sẻ khiến người người nhà nhà phải ngưỡng mộ.</p>
-                            <footer className="card-blockquote"><cite title="Source title">Cơm trưa "vợ nhà người ta" làm đầy ắp tình yêu khiến cư dân mạng trầm trồ vì độ đảm đang</cite></footer>
-                            </blockquote>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="card">
-                        <a href="chitiet.html"><img src="https://kenh14cdn.com/2019/6/25/screen-shot-2019-06-25-at-101726-am-15614332031522123972695.png" alt="" className="img-fluid" /></a>
-                        <div className="card-body">
-                            <blockquote className="blockquote">
-                            <p>Loạt cơm hộp đẹp mắt, đầy đủ màu sắc và dinh dưỡng mà chị vợ trẻ chia sẻ khiến người người nhà nhà phải ngưỡng mộ.</p>
-                            <footer className="card-blockquote"><cite title="Source title">Cơm trưa "vợ nhà người ta" làm đầy ắp tình yêu khiến cư dân mạng trầm trồ vì độ đảm đang</cite></footer>
-                            </blockquote>
-                        </div>
-                        </div>
-                    </div>
+                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
+                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
+                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
+                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
+                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
+                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
                     </div>
                 </div>
                 {/* end tin tuc */}
