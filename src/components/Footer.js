@@ -9,13 +9,13 @@ class Footer extends Component {
                         <p>&copy; Your Website 2019. All Rights Reserved.</p>
                         <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#">Privacy</a>
+                            <a href="/">Privacy</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">Terms</a>
+                            <a href="/">Terms</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#">FAQ</a>
+                            <a href="/">FAQ</a>
                         </li>
                         </ul>
                     </div>
