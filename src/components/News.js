@@ -3,7 +3,9 @@ import NewsItem from './NewsItem';
 import dl from './dulieu.json';
 class News extends Component {
     render() {
-        console.log(dl);
+        // var so = [1,3,4,5,6,9];
+        // var so2 = so.map((value,key) => value*3);
+        // console.log(so2);
         return (
             <div>
                 {/* begin menu */}
@@ -60,12 +62,16 @@ class News extends Component {
                 {/* begin tin tuc */}
                 <div className="container">
                     <div className="row mt-3">
-                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
-                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
-                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
-                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
-                    <NewsItem anh="https://i-thethao.vnecdn.net/2019/06/25/Untitled-7952-1561426157.jpg" 
-                    trichDan="Trận hòa 1-1 với Ecuador ở lượt đấu cuối bảng C không đủ để thầy trò Hajime Moriyasu vào tứ kết." tieuDe="Nhật Bản dừng bước tại Copa America 2019"></NewsItem>
+                        {
+                            dl.map((value,key) => {
+                                return (
+                                    <NewsItem key={key}
+                                    anh={value.anh}
+                                    tieuDe={value.tieuDe}
+                                    trichDan={value.trichDan}></NewsItem>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 {/* end tin tuc */}
