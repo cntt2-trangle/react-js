@@ -6,16 +6,14 @@ import Footer from './Footer';
 import News from './News';
 import NewDetail from './NewDetail';
 import Contact from './Contact';
+import DieuHuongURL from '../router/DieuHuongURL';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Nav></Nav>
-        {/* <Home></Home> */}
-        {/* <News></News> */}
-        {/* <NewDetail></NewDetail> */}
-        <Contact></Contact>
+        <DieuHuongURL></DieuHuongURL>
         <Footer></Footer>
         
       </div>
