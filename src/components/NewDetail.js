@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-
+import dl from './dulieu.json';
 class NewDetail extends Component {
     render() {
-        console.log(this.props);
+        // var x=2;
+        // var y=2;
+        // y = parseInt(y,20);
+        // if(x===y) {
+        //     console.log("bang nhau");
+        // }
+        // console.log(typeof(y));
+        console.log(this.props.match.params.id);
+        console.log(typeof(this.props.match.params.id));
+        
         return (
             <div>
                 {/* begin menu */}
@@ -57,18 +66,26 @@ class NewDetail extends Component {
                     </div>
                 </header>
                 {/* begin tin tuc */}
-                <div className="jumbotron jumbotron-fluid">
-                    <div className="container">
-                    <img src="https://kenh14cdn.com/2019/6/25/screen-shot-2019-06-25-at-101726-am-15614332031522123972695.png" className="img-fluid" alt="" />
-                    <p className="lead">Jumbo helper text</p>
-                    <hr className="my-2" />
-                    <p>Chia sẻ này rất nhanh đã giành được sự chú ý của cộng đồng mạng, chủ yếu là vì "visual" của những món ăn quá đẹp mắt, màu sắc hài hoà, và nếu để ý kỹ thì những thực đơn đều có sự kết hợp dinh dưỡng rất đầy đủ. Ngoài ra, lượng "khổng lồ" của các thực đơn cũng khiến người ta phải choáng váng vì không hiểu sao mà chị Ha Nguyen lại có thể nghĩ ra hơn 40 sự kết hợp không cái nào "đụng hàng" cái nào. Vốn việc suy nghĩ ngày mai nấu gì, ngày kia ăn gì để cho chồng, con không bị ngán vẫn luôn là vấn đề muôn thuở của các bà nội trợ, chia sẻ này của chị không thể nghi ngờ là một gợi ý tuyệt vời cho vô số người.</p>
-                    <img src="https://kenh14cdn.com/thumb_w/660/2019/6/25/screen-shot-2019-06-25-at-101900-am-15614332031631675019676.png" className="img-fluid" alt="" />
-                    <p>Khi hỏi làm thế nào mà chị có thể sáng tạo như thế, Ha Nguyen đã trả lời rất khiêm tốn rằng chị chỉ kết hợp những món mà mình biết cho phong phú, chứ cũng không phải sáng tạo gì. Chị cũng cho hay rằng mình mới bắt đầu làm cơm từ khoảng nửa năm nay, do mới cưới không lâu.
-                        Ngoài ra, Ha cũng chia sẻ tip để kết hợp các món ăn rất đơn giản là miễn sao một bữa ăn có đủ 4 yếu tố là cơm, thịt, rau và hoa quả. Hôm nào có canh thì sẽ kết hợp với các món thịt khô, còn không có canh thì làm thịt có ít sốt cho dễ ăn. Chia sẻ tuy đơn giản, nhưng chắc hẳn ai cũng cảm nhận được sự "có tâm" phía sau, có vậy mới tạo ra loạt những hộp cơm chan chứa tình cảm như thế này nhỉ?
-                        Hãy cùng chúng mình chiêm ngưỡng một số các món ăn ngon miệng đẹp mắt do chị Ha Nguyen chuẩn bị nhé!</p>
-                    </div>
-                </div>
+                {
+                    dl.map((value,key) => {
+                        if(value.id == this.props.match.params.id) {
+                            return (
+                                <div className="jumbotron jumbotron-fluid">
+                                    <div className="container">
+                                        <img src={value.anh} className="img-fluid rong100" alt="" />
+                                        <h3 className="lead text-center">{value.tieuDe}</h3>
+                                        <hr className="my-2" />
+                                        {
+                                            value.noiDung
+                                        }
+                                        </div>
+                                </div>
+                            )
+                        }
+                    })
+                }
+                
+
                 <div className="container">
                     <h4 className="card-title text-center">Tin liên quan</h4>
                     <div className="row">
