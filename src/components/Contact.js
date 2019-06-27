@@ -14,14 +14,31 @@ class Contact extends Component {
             isRedirect: false
         }
     }
+    isChange = (event) => {
+        const ten = event.target.name;
+        const giatri = event.target.value;
+        this.setState({
+            [ten]:giatri
+        });
+    }
     submitForm = (event) => {
         event.preventDefault();
         this.setState({
             isRedirect:true
         });
     }
+    getGiaTri = () => {
+        var noiDung = "";
+        noiDung += "Ten nhan duoc la: " + this.state.fName;
+        noiDung += "/ Email nhan duoc la: " + this.state.fEmail;
+        noiDung += "/ Phone nhan duoc la: " + this.state.fPhone;
+        noiDung += "/ Message nhan duoc la: " + this.state.fMess;
+        return noiDung;
+    }
     render() {
         if (this.state.isRedirect) {
+
+            console.log(this.getGiaTri());
             return <Redirect to="/"/>;
         }
         return (
@@ -82,28 +99,28 @@ class Contact extends Component {
                             <div className="control-group">
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Name</label>
-                                <input className="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                <input onChange={(event) => this.isChange(event)} name="fName" className="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
                                 <p className="help-block text-danger" />
                             </div>
                             </div>
                             <div className="control-group">
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Email Address</label>
-                                <input className="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                <input onChange={(event) => this.isChange(event)} name="fEmail" className="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
                                 <p className="help-block text-danger" />
                             </div>
                             </div>
                             <div className="control-group">
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Phone Number</label>
-                                <input className="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input onChange={(event) => this.isChange(event)} name="fPhone" className="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
                                 <p className="help-block text-danger" />
                             </div>
                             </div>
                             <div className="control-group">
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Message</label>
-                                <textarea className="form-control" id="message" rows={5} placeholder="Message" required="required" data-validation-required-message="Please enter a message." aria-invalid="false" defaultValue={""} />
+                                <textarea onChange={(event) => this.isChange(event)} name="fMess" className="form-control" id="message" rows={5} placeholder="Message" required="required" data-validation-required-message="Please enter a message." aria-invalid="false" defaultValue={""} />
                                 <p className="help-block text-danger" />
                             </div>
                             </div>
