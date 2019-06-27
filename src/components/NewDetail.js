@@ -12,7 +12,7 @@ class NewDetail extends Component {
         // console.log(typeof(y));
         // console.log(this.props.match.params.id);
         // console.log(typeof(this.props.match.params.id));
-        
+        var dem=1;
         return (
             <div>
                 {/* begin menu */}
@@ -85,27 +85,24 @@ class NewDetail extends Component {
                         }
                     })
                 }
-                
-
                 <div className="container">
                     <h4 className="card-title text-center">Tin liên quan</h4>
                     <div className="row">
                     <div className="col-12">
                         <div className="card-deck">
                             {
-                                
-                               dl.map((value,key) => {
-                                    if(key<=3) {
-                                        return (
-                                            <NewsRelated key={key}
-                                            tinId={value.id}
-                                            anh={value.anh}
-                                            tieuDe={value.tieuDe}
-                                            trichDan={value.trichDan}></NewsRelated>
-                                        )
+                                dl.map((value,key) => {
+                                    if(value.id != this.props.match.params.id) {
+                                        if(dem<=4) {
+                                            return (
+                                                <NewsRelated key={key}
+                                                tinId={value.id}
+                                                anh={value.anh}
+                                                tieuDe={value.tieuDe}
+                                                trichDan={value.trichDan}></NewsRelated>
+                                            )
+                                        }
                                     }
-                                    
-                                   
                                }) 
                             }
                         </div>
