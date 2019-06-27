@@ -22,6 +22,13 @@ class Contact extends Component {
             isRedirect:true
         });
     }
+    isFileChange = (event) => {
+        //const fAnh = event.target.files[0];
+        const tenanh = event.target.files[0].name;
+        this.setState({
+            fAnh : tenanh
+        });
+    }
     getGiaTri = () => {
         var noiDung = "";
         noiDung += "Ten nhan duoc la: " + this.state.fName;
@@ -29,6 +36,7 @@ class Contact extends Component {
         noiDung += "/ Phone nhan duoc la: " + this.state.fPhone;
         noiDung += "/ Message nhan duoc la: " + this.state.fMess;
         noiDung += "/ Ngay nhan duoc la: " + this.state.fNgay;
+        noiDung += "/ Anh nhan duoc la: " + this.state.fAnh;
         return noiDung;
     }
     render() {
@@ -125,12 +133,9 @@ class Contact extends Component {
                             <div className="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Chọn ngày</label>
                                 
-                                  <select value={this.state.fNgay} className="form-control" name="fNgay" onChange={(event) => this.isChange(event)}>
-                                    <option value="thu 3">Ngày thứ 3</option>
-                                    <option value="thu 5">Ngày thứ 5</option>
-                                    <option value="thu 7">Ngày thứ 7</option>
-                                    <option value="chunhat">Ngày chủ nhật</option>
-                                  </select>
+                                  
+                                    <input onChange={(event) => this.isFileChange(event)} type="file" className="form-control-file" name="fAnh" />
+                                    
                                 
                                 <p className="help-block text-danger" />
                             </div>
