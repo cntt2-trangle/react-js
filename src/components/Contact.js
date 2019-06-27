@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Redirect,
+    withRouter
+  } from 'react-router-dom';
 
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isRedirect: false
+        }
+    }
+    submitForm = (event) => {
+        event.preventDefault();
+        this.setState({
+            isRedirect:true
+        });
+    }
     render() {
+        if (this.state.isRedirect) {
+            return <Redirect to="/"/>;
+        }
         return (
             <div>
                 {/* begin menu */}
@@ -15,13 +37,13 @@ class Contact extends Component {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href="tintuc.html">Tin tức</a>
+                            <a className="nav-link js-scroll-trigger" href="/tin">Tin tức</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href="chitiet.html">Tin chi tiết</a>
+                            <a className="nav-link js-scroll-trigger" href="/tin-chi-tiet">Tin chi tiết</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                            <a className="nav-link js-scroll-trigger" href="/lien-he">Contact</a>
                         </li>
                         </ul>
                     </div>
@@ -88,7 +110,7 @@ class Contact extends Component {
                             <br />
                             <div id="success" />
                             <div className="form-group">
-                            <button type="submit" className="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                            <button type="submit" onClick={(event) => this.submitForm()} className="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
                             </div>
                         </form>
                         </div>
