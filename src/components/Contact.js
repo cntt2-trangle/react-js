@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Redirect,
-    withRouter
-  } from 'react-router-dom';
+import {BrowserRouter as Redirect} from 'react-router-dom';
 
 class Contact extends Component {
     constructor(props) {
