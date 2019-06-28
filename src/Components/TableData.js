@@ -3,7 +3,13 @@ import TableDataRow from './TableDataRow';
 
 class TableData extends Component {
     mappingDataUser = () => this.props.dataUserProps.map((value,key) => (
-        <TableDataRow editFunClick={() => this.props.editFun()} userName={value.name} key={key} stt={key} tel={value.tel} permission={value.permission}/> 
+        <TableDataRow 
+        editFunClick={(user) => this.props.editFun(value)} 
+        userName={value.name} 
+        key={key} 
+        stt={key} 
+        tel={value.tel} 
+        permission={value.permission}/> 
     ))
 
     render() {
