@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './../App.css';
+import Header from './Header';
+import Search from './Search';
+import TableData from './TableData';
+import AddUser from './AddUser';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header/>
+          <div className="searchForm">
+            <div className="container">
+              <div className="row">
+                <Search></Search>
+                <TableData></TableData>
+                <AddUser></AddUser>
+              </div>
+            </div>
+          </div>
+      </div>
+    );
+  }
 }
 
 export default App;
