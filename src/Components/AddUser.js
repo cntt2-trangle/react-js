@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
 class AddUser extends Component {
-
-    render() {
-        return (
-            <div className="col-3">
-                <div>
-                    {/* {this.hienThiNut()} */}
-                    <div className="card boder-primary mb-3 mt-2">
+    kiemTraTrangThai = () => {
+        if(this.props.hienThiForm === true) {
+            return (
+                <div className="card boder-primary mb-3 mt-2">
                     <div className="card-header">Thêm mới User vào hệ thống</div>
                     <div className="card-body text-primary">
                         <div className="form-group">
@@ -26,7 +23,16 @@ class AddUser extends Component {
                         </div>
                         <div className="btn btn-block btn-primary">Thêm mới</div>
                     </div>
-                    </div>
+                </div>
+            )
+        }
+    }
+    render() {
+        return (
+            <div className="col-3">
+                <div>
+                    {/* {this.hienThiNut()} */}
+                    {this.kiemTraTrangThai()}
                 </div>
             </div>
         );
