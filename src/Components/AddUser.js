@@ -8,20 +8,24 @@ class AddUser extends Component {
         }
     }
 
+    thayDoiTrangThai = () => {
+        this.setState({
+            trangThaiChinhSua: !this.state.trangThaiChinhSua
+        });
+    }
+
     hienThiNut = () => {
         if(this.state.trangThaiChinhSua === true) {
-            return <div className="btn btn-block btn-outline-secondary">Đóng lại</div>;
+            return <div className="btn btn-block btn-outline-secondary" onClick={() => this.thayDoiTrangThai()}>Đóng lại</div>;
         } else {
-            return <div className="btn btn-block btn-outline-info">Thêm mới</div>;
+            return <div className="btn btn-block btn-outline-info" onClick={() => this.thayDoiTrangThai()}>Thêm mới</div>;
         }
     }
 
-    render() {
-        return (
-            <div className="col-3">
-                <div>
-                    {this.hienThiNut()}
-                    <div className="card boder-primary mb-3 mt-2">
+    hienThiForm = () => {
+        if(this.state.trangThaiChinhSua === true) {
+            return (
+                <div className="card boder-primary mb-3 mt-2">
                     <div className="card-header">Thêm mới User vào hệ thống</div>
                     <div className="card-body text-primary">
                         <div className="form-group">
@@ -40,7 +44,17 @@ class AddUser extends Component {
                         </div>
                         <div className="btn btn-block btn-primary">Thêm mới</div>
                     </div>
-                    </div>
+                </div>
+            )
+        }
+    }
+
+    render() {
+        return (
+            <div className="col-3">
+                <div>
+                    {this.hienThiNut()}
+                    {this.hienThiForm()}
                 </div>
             </div>
         );
