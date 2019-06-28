@@ -26,7 +26,6 @@ class App extends Component {
   //   alert("ket noi thanh cong");
   // }
   render() {
-    console.log(this.state.data);
     return (
       <div>
         <Header/>
@@ -34,7 +33,7 @@ class App extends Component {
             <div className="container">
               <div className="row">
                 <Search ketNoi = {() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm}></Search>
-                <TableData></TableData>
+                <TableData dataUserProps={this.state.data}></TableData>
                 <AddUser hienThiForm={this.state.hienThiForm}></AddUser>
               </div>
             </div>
