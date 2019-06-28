@@ -8,9 +8,12 @@ class Search extends Component {
             tempValue:''
         }
     }
+
+    // props.changeEditUserStatus
+
     isShowEditForm = () => {
         if(this.props.editUserStatus === true) {
-            return <EditUser></EditUser>
+            return <EditUser changeEditUserStatus={() => this.props.changeEditUserStatus()}></EditUser>
         }
     }
     isChange = (event) => {

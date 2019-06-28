@@ -24,7 +24,7 @@ class EditUser extends Component {
                                         <option value={3}>Normal</option>
                                     </select>
                                     </div>
-                                    <input type="reset" className="btn btn-block btn-danger" value="Lưu"></input>
+                                    <input type="reset" className="btn btn-block btn-danger" value="Lưu" onClick={() => this.props.changeEditUserStatus()}></input>
                                 </div>
                             </div>
                         </form>

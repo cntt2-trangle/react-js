@@ -18,6 +18,12 @@ class App extends Component {
     }
   }
 
+  changeEditUserStatus = () => {
+    this.setState({
+      editUserStatus: !this.state.editUserStatus
+    });
+  }
+
   editUser = (user) => {
     console.log("Da ket noi ok");
     console.log(user);
@@ -72,9 +78,18 @@ class App extends Component {
                 ketNoi = {() => this.doiTrangThai()} 
                 hienThiForm={this.state.hienThiForm}
                 editUserStatus={this.state.editUserStatus}
+                changeEditUserStatus = {() => this.changeEditUserStatus()}
+
                 ></Search>
-                <TableData editFun={(user) => this.editUser(user)} dataUserProps={ketQua}></TableData>
-                <AddUser add={(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} hienThiForm={this.state.hienThiForm}></AddUser>
+                <TableData 
+                changeEditUserStatus = {() => this.changeEditUserStatus()}
+                editFun={(user) => this.editUser(user)} 
+                dataUserProps={ketQua}
+                ></TableData>
+                <AddUser 
+                add={(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} 
+                hienThiForm={this.state.hienThiForm}
+                ></AddUser>
               </div>
             </div>
           </div>
