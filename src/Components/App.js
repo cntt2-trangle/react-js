@@ -6,6 +6,9 @@ import TableData from './TableData';
 import AddUser from './AddUser';
 
 class App extends Component {
+  thongBao = () => {
+    alert("ket noi thanh cong");
+  }
   render() {
     return (
       <div>
@@ -13,7 +16,7 @@ class App extends Component {
           <div className="searchForm">
             <div className="container">
               <div className="row">
-                <Search></Search>
+                <Search ketNoi = {() => this.thongBao()}></Search>
                 <TableData></TableData>
                 <AddUser></AddUser>
               </div>
