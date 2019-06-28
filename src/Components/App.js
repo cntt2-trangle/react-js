@@ -16,8 +16,8 @@ class App extends Component {
     }
   }
 
-  checkConnect = () => {
-    alert("ket noi roi nhe");
+  getTextSearch = (dl) => {
+    console.log("du lieu nhan duoc la " + dl);
   }
 
   doiTrangThai = () => {
@@ -36,7 +36,7 @@ class App extends Component {
           <div className="searchForm">
             <div className="container">
               <div className="row">
-                <Search checkConnectProps={() => this.checkConnect()}
+                <Search checkConnectProps={(dl) => this.getTextSearch(dl)}
                 ketNoi = {() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm}></Search>
                 <TableData dataUserProps={this.state.data}></TableData>
                 <AddUser hienThiForm={this.state.hienThiForm}></AddUser>
