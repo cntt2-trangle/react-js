@@ -23,8 +23,13 @@ class App extends Component {
     item.name = name;
     item.tel = tel;
     item.permission = permission;
+    var items = this.state.data;
+    items.push(item);
+    this.setState({
+      data:items
+    });
     console.log("ket noi ok");
-    console.log(item);
+    console.log(this.state.data);
   }
 
   getTextSearch = (dl) => {
