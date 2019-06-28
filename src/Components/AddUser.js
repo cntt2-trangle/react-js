@@ -19,12 +19,12 @@ class AddUser extends Component {
         });
 
         // package to item
-        var item = {};
-        item.id = this.state.id;
-        item.name = this.state.name;
-        item.tel = this.state.tel;
-        item.permission = this.state.permission;
-        console.log(item);
+        // var item = {};
+        // item.id = this.state.id;
+        // item.name = this.state.name;
+        // item.tel = this.state.tel;
+        // item.permission = this.state.permission;
+        //console.log(item);
     }
     
     kiemTraTrangThai = () => {
@@ -48,7 +48,7 @@ class AddUser extends Component {
                                 <option value={3}>Normal</option>
                             </select>
                             </div>
-                            <div className="btn btn-block btn-primary">Thêm mới</div>
+                            <div className="btn btn-block btn-primary" onClick={(name,tel,permission) => this.props.add(this.state.name, this.state.tel, this.state.permission)}>Thêm mới</div>
                         </div>
                     </div>
                 </div>
