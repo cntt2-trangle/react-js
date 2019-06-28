@@ -16,7 +16,7 @@ class TableData extends Component {
                     </thead>
                     <tbody>
                     <tr>
-                        <td scope="row">1</td>
+                        <td >1</td>
                         <td>Lê Văn</td>
                         <td>0989898989</td>
                         <td>Moderator</td>
@@ -28,7 +28,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">1</td>
+                        <td >1</td>
                         <td>Lê Văn</td>
                         <td>0989898989</td>
                         <td>Moderator</td>
@@ -40,7 +40,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">1</td>
+                        <td >1</td>
                         <td>Lê Văn</td>
                         <td>0989898989</td>
                         <td>Moderator</td>
@@ -52,7 +52,7 @@ class TableData extends Component {
                         </td>
                     </tr>
                     <tr>
-                        <td scope="row">1</td>
+                        <td >1</td>
                         <td>Lê Văn</td>
                         <td>0989898989</td>
                         <td>Moderator</td>

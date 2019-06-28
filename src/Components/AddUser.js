@@ -9,10 +9,10 @@ class AddUser extends Component {
                     <div className="card-header">Thêm mới User vào hệ thống</div>
                     <div className="card-body text-primary">
                         <div className="form-group">
-                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Tên User" />
+                        <input type="text" className="form-control" placeholder="Tên User" />
                         </div>
                         <div className="form-group">
-                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Điện thoại" />
+                        <input type="text" className="form-control" placeholder="Điện thoại" />
                         </div>
                         <div className="form-group">
                         <select className="custom-select" required>
