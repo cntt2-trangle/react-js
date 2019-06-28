@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class EditUser extends Component {
+    // props.userEditObject
     render() {
         return (
             <div className="col-12">
@@ -11,13 +12,13 @@ class EditUser extends Component {
                                 <div className="card-header text-center">Sửa thông tin User trong hệ thống</div>
                                 <div className="card-body text-primary">
                                     <div className="form-group">
-                                    <input type="text" name="name" className="form-control" placeholder="Tên User" />
+                                    <input defaultValue={this.props.userEditObject.name} type="text" name="name" className="form-control" placeholder="Tên User" />
                                     </div>
                                     <div className="form-group">
-                                    <input type="text" name="tel" className="form-control" placeholder="Điện thoại" />
+                                    <input defaultValue={this.props.userEditObject.tel} type="text" name="tel" className="form-control" placeholder="Điện thoại" />
                                     </div>
                                     <div className="form-group">
-                                    <select className="custom-select" name="permission" required>
+                                    <select defaultValue={this.props.userEditObject.permission} className="custom-select" name="permission" required>
                                         <option value>Chọn quyền mặc định</option>
                                         <option value={1}>Admin</option>
                                         <option value={2}>Modrator</option>
