@@ -17,7 +17,9 @@ class App extends Component {
   }
 
   getTextSearch = (dl) => {
-    console.log("du lieu nhan duoc la " + dl);
+    this.setState({
+      searchText:dl
+    });
   }
 
   doiTrangThai = () => {
@@ -30,6 +32,13 @@ class App extends Component {
   //   alert("ket noi thanh cong");
   // }
   render() {
+    var ketQua = [];
+    this.state.data.forEach((item) => {
+      if(item.name.indexOf(this.state.searchText) !== -1) {
+        ketQua.push(item);
+      }
+    })
+    console.log(ketQua);
     return (
       <div>
         <Header/>
