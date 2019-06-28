@@ -12,7 +12,8 @@ class App extends Component {
     super(props);
     this.state = {
       hienThiForm: false,
-      data: DataUser
+      data: DataUser,
+      searchText:''
     }
   }
 
@@ -47,7 +48,7 @@ class App extends Component {
               <div className="row">
                 <Search checkConnectProps={(dl) => this.getTextSearch(dl)}
                 ketNoi = {() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm}></Search>
-                <TableData dataUserProps={this.state.data}></TableData>
+                <TableData dataUserProps={ketQua}></TableData>
                 <AddUser hienThiForm={this.state.hienThiForm}></AddUser>
               </div>
             </div>
