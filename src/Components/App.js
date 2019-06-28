@@ -4,8 +4,8 @@ import Header from './Header';
 import Search from './Search';
 import TableData from './TableData';
 import AddUser from './AddUser';
-
 import DataUser from './Data.json';
+const uuidv1 = require('uuid/v1');
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
 
   getNewUserData = (name,tel,permission) => {
     var item = {};
-    item.id = "";
+    item.id = uuidv1();
     item.name = name;
     item.tel = tel;
     item.permission = permission;
