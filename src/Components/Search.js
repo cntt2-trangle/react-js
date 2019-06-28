@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import EditUser from './EditUser';
 
 class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tempValue:''
+        }
+    }
+    isShowEditForm = () => {
+        if(this.props.editUserStatus === true) {
+            return <EditUser></EditUser>
         }
     }
     isChange = (event) => {
@@ -24,6 +30,7 @@ class Search extends Component {
     render() {
         return (
             <div className="col-12">
+                {this.isShowEditForm()}
                 <div className="form-group">
                     <div className="btn-group">
                         <input type="text" className="form-control" onChange={(event) => this.isChange(event)} placeholder="Nhập tên cần tìm" style={{width: '500px'}} />
