@@ -3,10 +3,11 @@ import TableDataRow from './TableDataRow';
 
 class TableData extends Component {
     mappingDataUser = () => this.props.dataUserProps.map((value,key) => (
-        <TableDataRow userName={value.name} key={key} stt={key} tel={value.tel} permission={value.permission}/> 
+        <TableDataRow editFunClick={() => this.props.editFun()} userName={value.name} key={key} stt={key} tel={value.tel} permission={value.permission}/> 
     ))
 
     render() {
+        // props.editFun
         console.log(this.props.dataUserProps);
         return (
             <div className="col">
