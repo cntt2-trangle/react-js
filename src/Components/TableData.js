@@ -9,7 +9,7 @@ class TableData extends Component {
     render() {
         console.log(this.props.dataUserProps);
         return (
-            <div className="col-9">
+            <div className="col">
                 <table className="table table-striped table-hover">
                     <thead>
                     <tr>
