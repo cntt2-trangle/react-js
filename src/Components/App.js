@@ -5,11 +5,14 @@ import Search from './Search';
 import TableData from './TableData';
 import AddUser from './AddUser';
 
+import DataUser from './Data.json';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hienThiForm:false
+      hienThiForm: false,
+      data: DataUser
     }
   }
 
@@ -23,6 +26,7 @@ class App extends Component {
   //   alert("ket noi thanh cong");
   // }
   render() {
+    console.log(this.state.data);
     return (
       <div>
         <Header/>
